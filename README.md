@@ -109,3 +109,31 @@ app.on('activate', () => {
 });
 ```
 
+## Packaging App
+### Install Electron Forge
+```bash
+npm install --save-dev @electron-forge/cli
+```
+
+### Import Project to Forge
+```bash
+npx electron-forge import
+```
+
+### Updating `packages.json`
+```json
+  //...
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  //...
+  ```
+
+### Creating a distributable
+```bash
+npm run make
+```
+
+More : [Electron Tutorial](https://www.electronjs.org/docs/latest)
